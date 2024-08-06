@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETP PRoject
+        WhatsApp Message Scheduler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WhatsApp Message Scheduler</h1>
+        <form action="/send-message/" method="post">
+            <label for="mobileNumber">Enter Mobile Number:</label>
+            <input type="text" id="mobileNumber" name="mobile_number" placeholder="e.g., 919353503063" required>
+
+            <label for="message">Enter Message:</label>
+            <input type="text" id="message" name="message" placeholder="Your message here" required>
+
+            <label for="hours">Hours:</label>
+            <input type="number" id="hours" name="hours" min="0" max="23" value="0" required>
+
+            <label for="minutes">Minutes:</label>
+            <input type="number" id="minutes" name="minutes" min="0" max="59" value="0" required>
+
+            <button type="submit">Schedule WhatsApp Message</button>
+        </form>
+    </div>
+</body>
+</html>
